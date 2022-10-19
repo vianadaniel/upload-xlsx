@@ -5,7 +5,7 @@ import * as multer from 'multer'
 const routes = Router();
 
 routes.get('/', (request: Request, response: Response) => {
-    return response.json({ message: 'Hello Code83' })
+    return response.json({ message: 'Hello' })
 })
 
 routes.post('/upload', multer(multerConfig).single('file'), (request: Request, response: Response) => {
