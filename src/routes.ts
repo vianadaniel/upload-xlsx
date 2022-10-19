@@ -1,4 +1,4 @@
-import { Router, Request, Response, RouterOptions } from 'express';
+import { Router, Request, Response } from 'express';
 import { multerConfig } from './config/multer'
 import * as multer from 'multer'
 
@@ -12,7 +12,7 @@ routes.post('/upload', multer(multerConfig).single('file'), (request: Request, r
     
     console.log(request.file)
     
-    return response.json({ message: 'Imagem enviada' })
+    return response.json({ message: 'Xlsx enviada' })
 })
 
 export default routes;

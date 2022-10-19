@@ -14,7 +14,7 @@ export const multerConfig = {
         if (error) {
           callback(error, file.filename)
         }
-        const filename = `${hash.toString('HEX')}.xlsx`
+        const filename = `${hash.toString()}.xlsx`
         callback(null, filename)
       })
     }
